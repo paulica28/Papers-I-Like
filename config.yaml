@@ -1,0 +1,46 @@
+# Load data
+root_path: './data/crypto'
+checkpoints: './checkpoints/'
+sequence_length: 10
+prediction_length: 10
+target_dim: 1
+input_dim: 6
+hidden_size: 128
+embedding_dimension: 64
+
+# Diffusion process
+diff_steps: 1000
+dropout_rate: 0.1
+beta_schedule: 'linear'
+beta_start: 0.0
+beta_end: 1.0
+scale: 0.1
+
+# Bidirectional VAE
+arch_instance: 'res_mbconv'
+mult: 1
+num_layers: 2
+num_channels_enc: 32
+channel_mult: 2
+num_preprocess_blocks: 1
+num_preprocess_cells: 3
+groups_per_scale: 2
+num_postprocess_blocks: 1
+num_postprocess_cells: 2
+num_channels_dec: 32
+num_latent_per_group: 8
+
+# Training settings
+num_workers: 5
+patience: 3
+itr: 5
+train_epochs: 20
+batch_size: 16
+learning_rate: 0.0005
+weight_decay: 0.0
+zeta: 0.5
+eta: 1.0
+
+# Device
+use_gpu: true
+gpu: 0
