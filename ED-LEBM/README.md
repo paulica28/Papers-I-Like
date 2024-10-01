@@ -82,4 +82,4 @@ for epoch in range(10):
 ## References
 
 - Paper Title: "Energy Discrepancies: A Score-Independent Loss for Energy-Based Models"
-- For more details, refer to the full paper.
+- For more details, refer to the full [paper](https://arxiv.org/pdf/2307.06431).
