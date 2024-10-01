@@ -1,15 +1,15 @@
 
 # Energy Discrepancy (ED) for Training Energy-Based Models
 
-This repository contains an implementation of the training process for the paper titled **"Energy Discrepancy for Training Energy-Based Models."** The paper introduces a novel loss function called **Energy Discrepancy (ED)**, designed to improve the training efficiency and accuracy of energy-based models (EBMs) without relying on traditional, computationally expensive methods.
+This repository contains an implementation of the training process for the paper titled **"Energy Discrepancies: A Score-Independent Loss for Energy-Based Models"** The paper introduces a novel loss function called **Energy Discrepancy (ED)**, designed to improve the training efficiency and accuracy of energy-based models (EBMs) without relying on traditional, computationally expensive methods.
 
 ## Paper Abstract
 
-Energy-based models are a simple yet powerful class of probabilistic models, but their widespread adoption has been limited by the computational burden of training them. We propose a novel loss function called **Energy Discrepancy (ED)** which does not rely on the computation of scores or expensive Markov chain Monte Carlo (MCMC). 
+Energy-based models are a simple yet powerful class of probabilistic models, but their widespread adoption has been limited by the computational burden of training them. In a recent paper, the authors propose a novel loss function called Energy Discrepancy (ED), which does not rely on the computation of scores or expensive Markov chain Monte Carlo (MCMC).
 
-We show that the energy discrepancy approaches the explicit score matching and negative log-likelihood loss under different limits, effectively interpolating between both. Consequently, minimum energy discrepancy estimation overcomes the problem of nearsightedness encountered in score-based estimation methods, while also enjoying theoretical guarantees.
+The authors show that energy discrepancy approaches the explicit score matching and negative log-likelihood loss under different limits, effectively interpolating between both. Consequently, minimum energy discrepancy estimation overcomes the problem of nearsightedness encountered in score-based estimation methods, while also enjoying theoretical guarantees.
 
-Through numerical experiments, we demonstrate that ED learns low-dimensional data distributions faster and more accurately than explicit score matching or contrastive divergence. For high-dimensional image data, we describe how the manifold hypothesis puts limitations on our approach and demonstrate the effectiveness of energy discrepancy by training the energy-based model as a prior of a variational decoder model.
+Through numerical experiments, they demonstrate that ED learns low-dimensional data distributions faster and more accurately than explicit score matching or contrastive divergence. For high-dimensional image data, the paper describes how the manifold hypothesis puts limitations on their approach and demonstrates the effectiveness of energy discrepancy by training the energy-based model as a prior of a variational decoder model.
 
 ## Training Process
 
@@ -81,6 +81,5 @@ for epoch in range(10):
 
 ## References
 
-- Authors: [Include authors here]
-- Paper Title: "Energy Discrepancy for Training Energy-Based Models"
+- Paper Title: "Energy Discrepancies: A Score-Independent Loss for Energy-Based Models"
 - For more details, refer to the full paper.
