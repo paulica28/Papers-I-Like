@@ -17,12 +17,6 @@ RBMs are primarily used for:
 
 RBMs define an energy function that assigns a scalar energy value to every configuration of visible and hidden units. The model learns by adjusting its weights to minimize the energy of the training data.
 
-The joint probability distribution over the visible (\(v\)) and hidden (\(h\)) layers is defined as:
-\[
-P(v, h) = \frac{1}{Z} \exp(-E(v, h))
-\]
-where \(E(v, h)\) is the energy function and \(Z\) is a normalizing constant.
-
 ## Training RBMs with Contrastive Divergence (CD)
 
 Training an RBM involves maximizing the likelihood of the observed data, which is typically done using the Contrastive Divergence (CD) algorithm. CD is an efficient approximation technique for training RBMs, and it works as follows:
