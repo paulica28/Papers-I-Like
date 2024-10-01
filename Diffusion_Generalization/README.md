@@ -1,7 +1,7 @@
 
 # Replicating a Theoretical Exploration of Diffusion Models' Generalization Capabilities
 
-This repository contains code that replicates the experiment presented in the paper titled **"A Theoretical Exploration of Diffusion Models' Generalization Capabilities."** This paper provides a comprehensive theoretical analysis of the generalization attributes of diffusion models, establishing theoretical estimates for the generalization gap that evolves during the training dynamics of score-based diffusion models.
+This repository contains code that replicates the experiment presented in the paper titled **"On the Generalization Properties of Diffusion Models"** This paper provides a comprehensive theoretical analysis of the generalization attributes of diffusion models, establishing theoretical estimates for the generalization gap that evolves during the training dynamics of score-based diffusion models.
 
 The implementation draws inspiration from the code presented in **"Score-Based Generative Modeling through Stochastic Differential Equations."**
 
@@ -9,9 +9,9 @@ The implementation draws inspiration from the code presented in **"Score-Based G
 
 Diffusion models are a class of generative models that establish a stochastic transport map between an empirically observed, yet unknown, target distribution and a known prior. Despite their remarkable success in real-world applications, a theoretical understanding of their generalization capabilities remains underdeveloped.
 
-This work embarks on a comprehensive theoretical exploration of the generalization attributes of diffusion models. We establish theoretical estimates of the generalization gap that evolves in tandem with the training dynamics of score-based diffusion models, suggesting a polynomially small generalization error \(O(n^{-2/5} + m^{-4/5})\) on both the sample size \(n\) and the model capacity \(m\), evading the curse of dimensionality when early-stopped. Furthermore, we extend our quantitative analysis to a data-dependent scenario, wherein target distributions are portrayed as a succession of densities with progressively increasing distances between modes.
+This work embarks on a comprehensive theoretical exploration of the generalization attributes of diffusion models. We establish theoretical estimates of the generalization gap that evolves in tandem with the training dynamics of score-based diffusion models, suggesting a polynomially small generalization error \(O(n^{-2/5} + m^{-4/5})\) on both the sample size \(n\) and the model capacity \(m\), evading the curse of dimensionality when early-stopped. Furthermore, the authors extend their quantitative analysis to a data-dependent scenario, wherein target distributions are portrayed as a succession of densities with progressively increasing distances between modes.
 
-Our findings have been validated through numerical simulations, contributing to a rigorous understanding of diffusion models' generalization properties and offering insights for practical applications.
+The findings have been validated through numerical simulations, contributing to a rigorous understanding of diffusion models' generalization properties and offering insights for practical applications.
 
 ## Training Code
 
@@ -46,28 +46,6 @@ The loss function is designed for training score-based generative models:
 - `marginal_prob_std`: A function that provides the standard deviation of the perturbation kernel at a given time.
 - The model learns to match the perturbed data distribution to the underlying data distribution by minimizing the difference between the estimated score and the true perturbations.
 
-## How to Use This Code
-
-1. Clone the repository and navigate to the project directory:
-   ```bash
-   git clone [repository_url]
-   cd diffusion_model_generalization
-   ```
-
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the training script to replicate the experiment:
-   ```bash
-   python train.py
-   ```
-
-### Prerequisites
-
-- Python 3.7+
-- PyTorch
 
 ## Key Findings
 
@@ -77,5 +55,5 @@ The loss function is designed for training score-based generative models:
 
 ## References
 
-- **Main Paper**: [Include the title and link to the paper]
-- **Inspired by**: "Score-Based Generative Modeling through Stochastic Differential Equations" [Link to the paper or repository]
+- **Main Paper**: [https://proceedings.neurips.cc/paper_files/paper/2023/file/06abed94583030dd50abe6767bd643b1-Paper-Conference.pdf]
+- **Inspired by**: "Score-Based Generative Modeling through Stochastic Differential Equations" [https://arxiv.org/pdf/2011.13456]
