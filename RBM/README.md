@@ -40,28 +40,6 @@ Training an RBM involves maximizing the likelihood of the observed data, which i
 
 CD can be run for one step (CD-1) or multiple steps (CD-k), where more steps improve the approximation but increase computational cost.
 
-## How to Use This Code
-
-### Prerequisites
-
-- Python 3.7+
-- PyTorch
-
-### Training the RBM
-
-The `contrastive_divergence` method implements the CD algorithm to train the RBM model. Here's how you can train the model on your dataset:
-
-```python
-rbm = RBM(num_visible=number_of_visible_units, num_hidden=number_of_hidden_units, k=contrastive_divergence_steps)
-error = rbm.contrastive_divergence(input_data)
-print(f"Reconstruction error: {error}")
-```
-
-### Hyperparameters
-
-- `num_visible`: Number of units in the visible layer (depends on your dataset's input dimension).
-- `num_hidden`: Number of hidden units (set based on your feature extraction needs).
-- `k`: Number of Gibbs sampling steps for Contrastive Divergence.
 
 ## References
 
