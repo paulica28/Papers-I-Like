@@ -7,7 +7,6 @@ Learning to Generate and Transfer Data with Rectified Flow". The implementation 
 
 **Title:** Rectified Flow  
 **Paper:** [https://arxiv.org/pdf/2209.03003](#)  
-*(Replace the link above with the actual URL if available.)*
 
 ## Summary
 
