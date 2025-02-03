@@ -9,13 +9,13 @@ Learning to Generate and Transfer Data with Rectified Flow". The implementation 
 
 ## Summary
 
-We present **Rectified Flow**, a surprisingly simple approach to learning (neural) ordinary differential equation (ODE) models to transport between two empirically observed distributions, π₀ and π₁. This method provides a unified solution to generative modeling, domain transfer, and various other tasks involving distribution transport.
+Rectified Flow is a surprisingly simple approach to learning neural ordinary differential equation (ODE) models for transporting between two empirically observed distributions, π₀ and π₁. The method provides a unified solution for tasks such as generative modeling, domain transfer, and various other applications involving distribution transport.
 
-The core idea behind Rectified Flow is to learn an ODE that follows the straight paths connecting points drawn from π₀ and π₁ as closely as possible. This is achieved by solving a straightforward nonlinear least squares optimization problem, which scales to large models without introducing extra parameters beyond standard supervised learning.
+The core idea behind Rectified Flow is to learn an ODE that follows nearly straight paths connecting points drawn from π₀ and π₁. This is achieved by solving a nonlinear least squares optimization problem that scales to large models without introducing extra parameters beyond standard supervised learning.
 
-Key points include:
-- **Efficiency:** The straight paths are the shortest routes between two points and can be simulated exactly without time discretization, yielding computationally efficient models.
-- **Deterministic Coupling:** The process of rectification transforms an arbitrary coupling between π₀ and π₁ into a deterministic coupling with provably non-increasing convex transport costs.
-- **Recursive Improvement:** Recursively applying rectification produces a sequence of flows with increasingly straight paths, allowing accurate simulation even with coarse time discretization during inference.
-- **Empirical Success:** Experiments demonstrate that Rectified Flow achieves superb performance on tasks such as image generation, image-to-image translation, and domain adaptation—even with a single Euler discretization step.
+Key features include:
+- **Efficiency:** The straight paths represent the shortest routes between two points and can be simulated exactly without time discretization, yielding computationally efficient models.
+- **Deterministic Coupling:** The rectification process transforms an arbitrary coupling between π₀ and π₁ into a deterministic coupling with provably non-increasing convex transport costs.
+- **Recursive Improvement:** Recursively applying rectification results in a sequence of flows with increasingly straight paths, which can be simulated accurately even with coarse time discretization during inference.
+- **Empirical Performance:** Experimental results demonstrate that Rectified Flow achieves excellent performance on tasks such as image generation, image-to-image translation, and domain adaptation—even with a single Euler discretization step.
 
