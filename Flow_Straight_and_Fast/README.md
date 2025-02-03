@@ -4,8 +4,7 @@ This repository contains the code for a minimal implementation of **Rectified Fl
 Learning to Generate and Transfer Data with Rectified Flow". The implementation demonstrates a simple yet effective method for learning neural ODE models for distribution transport.
 
 ## Paper Details
-
-**Title:** Rectified Flow  
+  
 **Paper:** [https://arxiv.org/pdf/2209.03003](#)  
 
 ## Summary
